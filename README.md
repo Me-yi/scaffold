@@ -1,14 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Scaffold
+
+Last edited: 2025-02-21T17:41:42Z
+
+- [Scaffold](#scaffold)
+	- [Prerequisites](#prerequisites)
+		- [Node and npm management](#node-and-npm-management)
+	- [Setup](#setup)
+	- [Development](#development)
+	- [Testing](#testing)
+		- [Unit/Integration testing](#unitintegration-testing)
+		- [End-to-End testing](#end-to-end-testing)
+	- [Building](#building)
 
 ## Prerequisites
 
 ### Node and npm management
 
-Volta is used as the node management tool, used during local development.
+[Volta](https://volta.sh/) is used as the node version management tool during local development.
 
-For more set up details, please visit https://volta.sh/.
-
-Runtime and package manager requirements can be found in `package.json`. Under
+[Node.js](https://nodejs.org/) runtime and [npm](https://www.npmjs.com/) package manager requirements can be found in `package.json`.
 
 ```json
 {
@@ -19,41 +29,61 @@ Runtime and package manager requirements can be found in `package.json`. Under
 }
 ```
 
-## Getting Started
+## Setup
+
+Install dependency packages. All public packages within this environment originate from the [npm](https://www.npmjs.com/) public package registry, and uses the `npm-cli` command line tool.
+
+```sh
+npm install
+```
+
+> [!NOTE]
+> Using the command above, will additionally install browser binaries required for running of [Playwright](https://playwright.dev)
+
+## Development
 
 First, run the development server:
 
-```bash
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Testing
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Unit/Integration testing
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+[Vitest](https://vitest.dev) and [RTL (React Testing Library)](https://testing-library.com/docs/react-testing-library), to test both React UI component and TypeScript functions.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run tests with command below.
 
-## Learn More
+```sh
+npm test
+```
 
-To learn more about Next.js, take a look at the following resources:
+### End-to-End testing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+[Playwright](https://playwright.dev) is used to emulate user interactions with a webpage.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run tests with command below.
 
-## Deploy on Vercel
+```sh
+npm run test:e2e
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To visualise the tests within the Playwright GUI, use the command below.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```sh
+npm run test:e2e -- --ui
+```
+
+## Building
+
+This repo uses the [Next.js](https://nextjs.org) project bootstrap.
+
+Build project with command below.
+
+```sh
+npm run build
+```
