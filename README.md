@@ -1,5 +1,24 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
+## Prerequisites
+
+### Node and npm management
+
+Volta is used as the node management tool, used during local development.
+
+For more set up details, please visit https://volta.sh/.
+
+Runtime and package manager requirements can be found in `package.json`. Under
+
+```json
+{
+	"volta": {
+		"node": "22.14.0",
+		"npm": "11.1.0"
+	}
+}
+```
+
 ## Getting Started
 
 First, run the development server:
