@@ -3,14 +3,14 @@
 Last edited: 2025-02-21T17:41:42Z
 
 - [Scaffold](#scaffold)
-	- [Prerequisites](#prerequisites)
-		- [Node and npm management](#node-and-npm-management)
-	- [Setup](#setup)
-	- [Development](#development)
-	- [Testing](#testing)
-		- [Unit/Integration testing](#unitintegration-testing)
-		- [End-to-End testing](#end-to-end-testing)
-	- [Building](#building)
+  - [Prerequisites](#prerequisites)
+    - [Node and npm management](#node-and-npm-management)
+  - [Setup](#setup)
+  - [Development](#development)
+  - [Testing](#testing)
+    - [Unit/Integration testing](#unitintegration-testing)
+    - [End-to-End testing](#end-to-end-testing)
+  - [Building](#building)
 
 ## Prerequisites
 
@@ -22,10 +22,10 @@ Last edited: 2025-02-21T17:41:42Z
 
 ```json
 {
-	"volta": {
-		"node": "22.14.0",
-		"npm": "11.1.0"
-	}
+  "volta": {
+    "node": "22.14.0",
+    "npm": "11.1.0"
+  }
 }
 ```
 
