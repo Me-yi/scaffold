@@ -9,7 +9,10 @@ test('has title', async ({ page }) => {
 test('Deploy now link', async ({ page }) => {
   await page.goto('/')
 
-  const firstLink = await page.getByRole('link', { name: 'Deploy now' }).nth(0).getAttribute('href')
+  const firstLink = await page
+    .getByRole('link', { name: 'Deploy now' })
+    .nth(0)
+    .getAttribute('href')
 
   expect(firstLink).toMatch(/vercel.com\//g)
 })

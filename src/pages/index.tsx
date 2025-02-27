@@ -12,7 +12,14 @@ export default function Home() {
         <title>Home</title>
       </Head>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image className="dark:invert" src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{' '}
@@ -31,7 +38,13 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image className="dark:invert" src="/vercel.svg" alt="Vercel logomark" width={20} height={20} />
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
             Deploy now
           </a>
           <a
@@ -51,7 +64,13 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
           Learn
         </a>
         <a
@@ -60,7 +79,13 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
           Examples
         </a>
         <a
@@ -69,7 +94,13 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
           Go to nextjs.org →
         </a>
       </footer>
