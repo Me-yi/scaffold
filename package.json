@@ -3,16 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "preinstall": "npx playwright install",
-    "dev": "next dev --turbopack",
     "build": "next build",
+    "dev": "next dev --turbopack",
+    "format": "biome format --write",
+    "lint": "biome check",
+    "preinstall": "npx playwright install",
+    "prepare": "husky",
     "start": "next start",
-    "test": "vitest run",
     "test:e2e": "npx playwright test",
-    "prettier": "npx prettier . --check",
-    "prettier:write": "prettier --write .",
-    "lint": "next lint",
-    "prepare": "husky"
+    "test": "vitest run"
   },
   "dependencies": {
     "next": "15.5.4",
@@ -20,6 +19,7 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.2.4",
     "@eslint/eslintrc": "^3.3.1",
     "@playwright/test": "^1.55.1",
     "@tailwindcss/postcss": "^4.1.13",
@@ -34,7 +34,6 @@
     "husky": "^9.1.7",
     "jsdom": "^27.0.0",
     "postcss": "^8.5.6",
-    "prettier": "3.6.2",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite-tsconfig-paths": "^5.1.4",
