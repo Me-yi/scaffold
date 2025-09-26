@@ -11,6 +11,7 @@ Last edited: 2025-02-21T17:41:42Z
     - [Unit/Integration testing](#unitintegration-testing)
     - [End-to-End testing](#end-to-end-testing)
   - [Building](#building)
+  - [Linting and Formatting](#linting-and-formatting)
 
 ## Prerequisites
 
@@ -23,8 +24,8 @@ Last edited: 2025-02-21T17:41:42Z
 ```json
 {
   "volta": {
-    "node": "22.14.0",
-    "npm": "11.1.0"
+    "node": "24.9.0",
+    "npm": "11.6.1"
   }
 }
 ```
@@ -86,4 +87,16 @@ Build project with command below.
 
 ```sh
 npm run build
+```
+
+## Linting and Formatting
+
+[Biome](https://biomejs.dev/) is used for both our linter and formatting runner.
+
+```sh
+# Runs alongside ESlint
+npm run lint 
+
+# To reformat all FIXABLE linting and formatting issues
+npm run format
 ```
